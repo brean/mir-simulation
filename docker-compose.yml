@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  mir-simulation:
+    # MIR-100 robot simulation
+    image: mir-simulation
+    user: root
+    build:
+      context: .
+    environment: 
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ./custom_mir_robot/:/opt/workspace/src/custom_mir_robot:rw
+    command: ["bash", "-c", "source /opt/workspace/devel/setup.bash && roslaunch custom_mir_robot maze_world.launch"]
+    privileged: true
+    

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>custom_mir_robot</name>
+  <version>1.0.0</version>
+  <description>Custom MIR-100 launch scripts, extends https://github.com/dfki-ric/mir_robot.</description>
+
+  <maintainer email="andreas.bresser@dfki.de">Andreas Bresser</maintainer>
+  <author email="andreas.bresser@dfki.de">Andreas Bresser</author>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/dfki-ric/mir_robot</url>
+  <url type="repository">https://github.com/dfki-ric/mir_robot</url>
+  <url type="bugtracker">https://github.com/dfki-ric/mir_robot/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roslaunch</build_depend>
+
+  <exec_depend>mir_navigation</exec_depend>
+
+  <!-- mir-gazebo dependencies -->
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>fake_localization</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>mir_description</exec_depend>
+  <exec_depend>mir_driver</exec_depend>
+  <exec_depend>robot_localization</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rostopic</exec_depend>
+  <exec_depend>rqt_robot_steering</exec_depend>
+  <exec_depend>topic_tools</exec_depend>
+
+  <!-- mir-navigation dependencies -->
+  <exec_depend>amcl</exec_depend>
+  <exec_depend>base_local_planner</exec_depend>
+  <!-- <exec_depend>dwa_local_planner</exec_depend> -->
+  <exec_depend>dwb_critics</exec_depend>         <!-- for dwb_local_planner -->
+  <exec_depend>dwb_local_planner</exec_depend>   <!-- for dwb_local_planner -->
+  <exec_depend>dwb_plugins</exec_depend>         <!-- for dwb_local_planner -->
+  <!-- <exec_depend>eband_local_planner</exec_depend> -->
+  <exec_depend>hector_mapping</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>mir_driver</exec_depend>
+  <exec_depend>mir_dwb_critics</exec_depend>     <!-- for dwb_local_planner -->
+  <exec_depend>mir_gazebo</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>nav_core_adapter</exec_depend>    <!-- for dwb_local_planner -->
+  <exec_depend>python-matplotlib</exec_depend>
+  <exec_depend>sbpl_lattice_planner</exec_depend>
+  <!-- <exec_depend>teb_local_planner</exec_depend> -->
+</package>
