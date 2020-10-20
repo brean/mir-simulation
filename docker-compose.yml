@@ -4,6 +4,7 @@ services:
     # MIR-100 robot simulation
     image: mir-simulation
     user: root
+    entrypoint: /entrypoint.bash
     build:
       context: .
     environment: 
@@ -11,6 +12,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - ./custom_mir_robot/:/opt/workspace/src/custom_mir_robot:rw
-    command: ["bash", "-c", "source /opt/workspace/devel/setup.bash && roslaunch custom_mir_robot maze_world.launch"]
+    command: ["roslaunch", "custom_mir_robot", "maze_world.launch"]
     privileged: true
     

@@ -44,6 +44,9 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir -p /opt/workspace/src/
 
 COPY ./custom_mir_robot/ /opt/workspace/src/custom_mir_robot
+COPY ./entrypoint.bash /entrypoint.bash
+
+RUN chmod +x /entrypoint.bash
 
 RUN source /opt/ros/melodic/setup.bash \
   && cd /opt/workspace/src \
